@@ -28,6 +28,8 @@ composer require bydn/change-order-email
 4. Enter the new email address and click **Change**.
 5. The system will process the change and confirm whether the order was assigned to a registered customer or updated as a guest order.
 
+<img alt="Change Order Email" width="100%" src="https://github.com/danidnm/ByDN-Magento-Change-Order-Email/blob/master/docs/magento-change-email-extension.jpg"/>
+
 # Having Problems?
 
 Contact me at soy at solodani.com
