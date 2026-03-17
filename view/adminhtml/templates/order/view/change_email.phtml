@@ -1,0 +1,33 @@
+<?php
+/** @var $block \Bydn\ChangeOrderEmail\Block\Adminhtml\Order\View\ChangeEmail */
+$order = $block->getOrder();
+?>
+<?php if ($order): ?>
+    <tr>
+        <th style="vertical-align: middle;">
+            <span class="title"><?= $block->escapeHtml(__('Change email')) ?></span>
+        </th>
+        <td>
+            <form id="bydn-change-email-form" method="post" action="<?= $block->escapeUrl($block->getFormActionUrl()) ?>">
+                <input name="form_key" type="hidden" value="<?= $block->escapeHtml($block->getFormKey()) ?>" />
+                <input name="order_id" type="hidden" value="<?= $block->escapeHtml($order->getId()) ?>" />
+                <div class="admin__field">
+                    <div class="admin__field-control" style="text-align: right">
+                        <input type="email" 
+                            name="new_customer_email" 
+                            id="new_customer_email" 
+                            class="admin__control-text" 
+                            value="<?= $block->escapeHtml($order->getCustomerEmail()) ?>"
+                            style="display: inline-block; width: 70%;" />
+                        <button type="submit" 
+                            class="action-default scalable save primary"
+                            style="width: 25%;">
+                            <span><?= $block->escapeHtml(__('Change')) ?></span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </td>
+    </tr>
+<?php endif; ?>
+
